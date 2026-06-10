@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Audio Mixer</title>
+    <!-- Link the external CSS file, which must be named styles.css -->
+    <link rel="stylesheet" href="styles.css">
+</head> 
+<body>
+
+    <div class="container">
+        <h1 class="panel-title" style="font-size: 2rem;">Web Audio Mixer (The Mixer)</h1>
+        <div id="mixer-layout" class="mixer-layout">
+
+            <!-- Library (Left Column) -->
+            <div id="library" class="panel">
+                <h2 class="panel-title">Sound Library</h2>
+                <div id="song-list" class="song-list-container">
+                    <!-- Song buttons will be injected here by JavaScript -->
+                </div>
+                <div id="loading-status" class="loading-status">
+                    Initializing Audio...
+                </div>
+            </div>
+
+            <!-- Mixer Strips (Middle Column) -->
+            <div id="mixer-area" class="panel">
+                <h2 class="panel-title">Mixer Tracks</h2>
+                <div id="track-strips" class="track-strips-container">
+                    <!-- Added song strips will appear here by JavaScript -->
+                    <p class="empty-message" id="empty-message">
+                        Add a song from the library to start mixing!
+                    </p>
+                </div>
+            </div>
+
+            <!-- Master Controls (Right Column) -->
+            <div id="master-controls" class="panel master-controls-container">
+                <h2 class="panel-title" style="width: 100%;">Master Controls</h2>
+                <button id="play-all" class="btn btn-master-play">
+                    <span>▶️ Play All</span>
+                </button>
+                <button id="stop-all" class="btn btn-master-stop">
+                    <span>⏹️ Stop All</span>
+                </button>
+                <div class="master-info">
+                    Volume and Speed controls are per-track in the middle column.
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Link the external JavaScript file. Updated to load the project's JS -->
+    <script type="module" src="javascript.js"></script>
+</body>     
+</html>
